@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal
 
-![system](docs/system.gif)
+![system](docs/satop.gif)
 
 ### Requirements
 
