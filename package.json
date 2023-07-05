@@ -1,0 +1,52 @@
+{
+  "name": "satop",
+  "version": "0.0.1",
+  "description": "Bitcoin full node monitoring dashboard for terminal",
+  "main": "./index.js",
+  "bin": {
+    "satop": "./bin/satop"
+  },
+  "scripts": {
+    "test": "echo \"Test will be implemented.\" && exit 0",
+    "start": "./bin/satop",
+    "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
+    "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
+    "prepublishOnly": "marked-man --version $npm_package_version --manual 'satop help' --section 1 ./docs/cli.md > ./docs/cli.man"
+  },
+  "man": [
+    "./docs/cli.man"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st3b1t/SatoshiTop.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "dashboard",
+    "fullnode",
+    "system",
+    "monitoring",
+    "top",
+    "monitor"
+  ],
+  "author": "st3b1t",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/st3b1t/SatoshiTop/issues"
+  },
+  "homepage": "https://github.com/st3b1t/SatoshiTop",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "ini": "^4.1.1",
+    "jayson": "^4.1.0",
+    "systeminformation": "^5.18.3"
+  },
+  "engines": {
+    "node": "18.15.0"
+  },
+  "devDependencies": {
+    "marked-man": "^1.3.3",
+    "prettier": "^2.8.8"
+  }
+}

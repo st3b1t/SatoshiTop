@@ -1,0 +1,17 @@
+name: satop
+version: git
+summary: SatoshiTop
+description: |
+  Bitcoin full node monitoring dashboard for terminal
+
+grade: stable
+confinement: devmode
+
+apps:
+  satop:
+    command: satop
+
+parts:
+  satop:
+    plugin: nodejs
+    source: .

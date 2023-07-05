@@ -1,0 +1,8 @@
+#
+#Copy this file in path $HOME/.satoprc
+#
+#rpcconnect=127.0.0.1
+#rpcport=8332
+
+rpcuser = rpcuser
+rpcpassword = xxxxx

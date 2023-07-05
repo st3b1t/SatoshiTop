@@ -1,0 +1,31 @@
+.TH "SATOSHITOP" "1" "June 2023" "0.0.1" "satop help"
+.SH "NAME"
+\fBSatoshiTop\fR
+.TS
+tab(|) nowarn;
+cx.
+T{
+.P
+Bitcoin full node monitoring dashboard for terminal
+
+T}
+.TE
+.SH SYNOPSIS
+.P
+\fBsatop\fP
+.SH DESCRIPTION
+.P
+SatoshiTop is a system monitoring dashboard for Bitcoin full node in terminal much like htop, top, gtop etc\.\.\.
+.SH Website
+.P
+https://github.com/st3b1t/SatoshiTop
+.SH BUGS
+.P
+Please report any bugs to https://github.com/st3b1t/SatoshiTop
+.SH LICENSE
+.P
+Copyright (c) 2023, st3b1t (MIT License)\.
+.SH SEE ALSO
+.P
+node\.js(1),
+
