@@ -14,6 +14,7 @@ Bitcoin full node monitoring dashboard for terminal
 ```sh
 $ npm install satop -g
 ```
+Copy config file `dot.satoprc.example` in path `$HOME/.satoprc`
 
 ### Usage
 
