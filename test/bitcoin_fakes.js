@@ -53,7 +53,7 @@ module.exports = {
             "incrementalfee": 0.00001,
             "localaddresses": [
                 {
-                    "address": "xxxxx.onion",
+                    "address": "m72cepqoa2l54adxtjwb2x4ym67g3qwdd7ci6oddzcco5yjqd7mrdwqk.onion",
                     "port": 8333,
                     "score": 4
                 }
