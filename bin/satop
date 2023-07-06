@@ -1,3 +1,5 @@
 #!/usr/bin/env node
-
+/**
+ * Copyright (c) 2023 st3b1t
+ */
 require('../lib/cli')(process.env);
