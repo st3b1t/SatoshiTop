@@ -8,7 +8,9 @@ Bitcoin full node monitoring dashboard for terminal
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, uptime, tor address... (WORK IN PROGRESS)
 
-Many other features are work in progress, this project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
+Many other features are work in progress, many more [Blessed widgets](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
+This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
+
 
 ### Requirements
 
