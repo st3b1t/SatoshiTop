@@ -53,7 +53,7 @@ https://github.com/st3b1t/SatoshiTop
 
 ## BUGS
 
-Please report any bugs to https://github.com/st3b1t/SatoshiTop.
+Please report any bugs to https://github.com/st3b1t/SatoshiTop/issues.
 
 
 ## LICENSE
