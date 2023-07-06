@@ -23,6 +23,8 @@ $ npm install satop -g
 Copy config file `dot.satoprc.example` in path `$HOME/.satoprc` and add bitcoin rpc user and password.
 Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
+*Snap and Docker* setup is work in progress...
+
 ### Usage
 
 Start Satoshi Top with the `satop` command in system terminal(the same system whose resources you want to monitor).
