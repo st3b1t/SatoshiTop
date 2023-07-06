@@ -4,6 +4,12 @@ Bitcoin full node monitoring dashboard for terminal
 
 ![system](docs/satop.gif)
 
+## Features
+- general system resources: cpu, mem, disk, network, processes, temperature
+- bitcoin core specific: status, uptime, tor address... (WORK IN PROGRESS)
+
+Many other features are work in progress, this project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
+
 ### Requirements
 
 * Linux / OSX / Windows (partial support)
@@ -14,11 +20,12 @@ Bitcoin full node monitoring dashboard for terminal
 ```sh
 $ npm install satop -g
 ```
-Copy config file `dot.satoprc.example` in path `$HOME/.satoprc`
+Copy config file `dot.satoprc.example` in path `$HOME/.satoprc` and add bitcoin rpc user and password.
+Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
 ### Usage
 
-Start Satoshi Top with the `satop` command
+Start Satoshi Top with the `satop` command in system terminal(the same system whose resources you want to monitor).
 
 ```sh
 $ satop
@@ -30,14 +37,6 @@ Learn more...
 
 ```sh
 $ satop --help
-```
-
-### Troubleshooting
-
-If you see question marks or other different characters, try to run it with these environment variables:
-
-```sh
-$ LANG=en_US.utf8 TERM=xterm-256color satop
 ```
 
 ## License
