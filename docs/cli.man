@@ -1,4 +1,4 @@
-.TH "SATOSHITOP" "1" "July 2023" "0.0.2" "satop help"
+.TH "SATOSHITOP" "1" "July 2023" "0.0.3" "satop help"
 .SH "NAME"
 \fBSatoshiTop\fR
 .TS
