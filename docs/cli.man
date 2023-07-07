@@ -1,4 +1,4 @@
-.TH "SATOSHITOP" "1" "July 2023" "0.0.3" "satop help"
+.TH "SATOSHITOP" "1" "July 2023" "0.1.0" "satop help"
 .SH "NAME"
 \fBSatoshiTop\fR
 .TS
@@ -70,7 +70,7 @@ print version
 https://github.com/st3b1t/SatoshiTop
 .SH BUGS
 .P
-Please report any bugs to https://github.com/st3b1t/SatoshiTop
+Please report any bugs to https://github.com/st3b1t/SatoshiTop/issues
 .SH LICENSE
 .P
 Copyright (c) 2023, st3b1t (MIT License)\.
