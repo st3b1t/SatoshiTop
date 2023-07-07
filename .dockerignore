@@ -1,10 +1,9 @@
-.git*
-.satoprc
-test/
-docs/
-docker/
-node_modules/
 *.gif
 *.png
+.git*
 .github/
+.satoprc
+docker/
+docs/
+node_modules/
 snap/
