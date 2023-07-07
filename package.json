@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Test will be implemented.\" && exit 0",
     "start": "./bin/satop",
+    "dev": "nodemon ./bin/satop",
     "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
     "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
     "prepublishOnly": "marked-man --version $npm_package_version --manual 'satop help' --section 1 ./docs/cli.md > ./docs/cli.man"
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "marked-man": "^1.3.3",
+    "nodemon": "^2.0.22",
     "prettier": "^2.8.8"
   }
 }
