@@ -58,7 +58,7 @@ Please report any bugs to https://github.com/st3b1t/SatoshiTop/issues.
 
 ## LICENSE
 
-Copyright (c) 2023, st3b1t (MIT License).
+Copyright (c) 2023 st3b1t (MIT License)
 
 
 ## SEE ALSO
