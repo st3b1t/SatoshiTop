@@ -1,5 +1,25 @@
 const methods = {
     getblockchaininfo: () => {
+        if (Math.random()>0.7) {
+            return '';
+        }
+        if (Math.random()>0.5) { //no sync
+            return {
+              "chain": "main",
+              "blocks": 795163,
+              "headers": 795165,
+              "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
+              "difficulty": 52350439455487.47,
+              "time": 1687512682,
+              "mediantime": 1687508210,
+              "verificationprogress": 0.59947507366781,
+              "initialblockdownload": true,
+              "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
+              "size_on_disk": 556672030542,
+              "pruned": false,
+              "warnings": ""
+            }
+        }
         return {
           "chain": "main",
           "blocks": 795163,
@@ -10,23 +30,6 @@ const methods = {
           "mediantime": 1687508210,
           "verificationprogress": 0.9999947507366781,
           "initialblockdownload": false,
-          "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
-          "size_on_disk": 556672030542,
-          "pruned": false,
-          "warnings": ""
-        }
-    },
-    getblockchaininfo_nosync: () => {
-        return {
-          "chain": "main",
-          "blocks": 795163,
-          "headers": 795165,
-          "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
-          "difficulty": 52350439455487.47,
-          "time": 1687512682,
-          "mediantime": 1687508210,
-          "verificationprogress": 0.59947507366781,
-          "initialblockdownload": true,
           "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
           "size_on_disk": 556672030542,
           "pruned": false,
