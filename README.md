@@ -37,7 +37,7 @@ $ satop
 
 To stop satop use `q`, or `ctrl+c` in most shell environments.
 
-Learn more...
+Learn more about [command line parameters](docs/cli.md)...
 
 ```sh
 $ satop --help
