@@ -22,7 +22,7 @@ This project has been organized in small readable and easy to edit files to enco
 ```sh
 $ npm install satop -g
 ```
-Copy config file `dot.satoprc.example` in path `$HOME/.satoprc` and add bitcoin rpc user and password.
+Copy config file `dot.satoprc.example` in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
 Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
 *Snap and Docker* setup is work in progress...
@@ -35,6 +35,12 @@ Start Satoshi Top with the `satop` command in system terminal(the same system wh
 $ satop
 ```
 
+If Bitcoin daemon listening in different address(`127.0.0.1`) or a different port(`8333`), you can use command line parameters:
+
+```sh
+$ satop --rpcconnect=192.168.0.3 --rpcport=18332
+```
+
 To stop satop use `q`, or `ctrl+c` in most shell environments.
 
 Learn more about [command line parameters](docs/cli.md)...
@@ -45,6 +51,6 @@ $ satop --help
 
 ## License
 
-Copyright (c) 2023, st3b1t
+Copyright (c) 2023 st3b1t
 
 Released under [the MIT license](LICENSE).
