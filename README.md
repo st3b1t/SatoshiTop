@@ -15,7 +15,7 @@ This project has been organized in small readable and easy to edit files to enco
 ### Requirements
 
 * Linux / OSX / Windows (partial support)
-* Node.js >= v8
+* Node.js >= v18
 
 ### Installation
 
