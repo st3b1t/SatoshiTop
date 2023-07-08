@@ -51,6 +51,6 @@ $ satop --help
 
 ## License
 
-Copyright (c) 2023 st3b1t
+Copyright (c) 2023 [st3b1t](https://github.com/st3b1t)
 
 Released under [the MIT license](LICENSE).
