@@ -19,6 +19,8 @@ This project has been organized in small readable and easy to edit files to enco
 
 ### Installation
 
+By official [NPM package](https://npmjs.com/package/satop)
+
 ```sh
 $ npm install satop -g
 ```
@@ -49,8 +51,18 @@ Learn more about [command line parameters](docs/cli.md)...
 $ satop --help
 ```
 
+### Development
+
+```sh
+$ npm run dev
+```
+
+This script Set environment var `FAKEMODE` to allow bypass the real RPC connection.
+Additional parameter `--intervalrpc=1000` allows to speed up data polling and `nodemon` to reload the code at each edits.
+
+
 ## License
 
-Copyright (c) 2023 [st3b1t](https://github.com/st3b1t)
+Copyright (c) 2023 [st3b1t](https://github.com/st3b1t) [@st3b1t](https://twitter.com/st3b1t)
 
 Released under [the MIT license](LICENSE).
