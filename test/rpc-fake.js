@@ -1,9 +1,25 @@
+
+const fs = require('fs');
+
+const rnd = Math.random;
+
+let uptime = rnd()*1000000;
+let vp = 0;
+
 const methods = {
+    uptime: () => {
+        uptime += 17;
+        return uptime;
+    },
+    getpeerinfo: () => {
+        const peers = require('./getpeerinfo.json');
+        const pp = peers.slice(rnd(), 10+rnd()*2)
+        return pp.sort(() => (rnd() > .5) ? 1 : -1);
+    },
     getblockchaininfo: () => {
-        if (Math.random()>0.7) {
-            return '';
-        }
-        if (Math.random()>0.5) { //no sync
+        vp += 0.037;
+
+        if (vp < 1) { //no sync
             return {
               "chain": "main",
               "blocks": 795163,
@@ -12,7 +28,7 @@ const methods = {
               "difficulty": 52350439455487.47,
               "time": 1687512682,
               "mediantime": 1687508210,
-              "verificationprogress": 0.59947507366781,
+              "verificationprogress": vp,
               "initialblockdownload": true,
               "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
               "size_on_disk": 556672030542,
@@ -20,20 +36,23 @@ const methods = {
               "warnings": ""
             }
         }
-        return {
-          "chain": "main",
-          "blocks": 795163,
-          "headers": 795163,
-          "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
-          "difficulty": 52350439455487.47,
-          "time": 1687512682,
-          "mediantime": 1687508210,
-          "verificationprogress": 0.9999947507366781,
-          "initialblockdownload": false,
-          "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
-          "size_on_disk": 556672030542,
-          "pruned": false,
-          "warnings": ""
+        else {
+            vp = rnd()>0.9 ? 0 : 1;
+            return {
+              "chain": "main",
+              "blocks": 795163,
+              "headers": 795163,
+              "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
+              "difficulty": 52350439455487.47,
+              "time": 1687512682,
+              "mediantime": 1687508210,
+              "verificationprogress": 0.9999947507366781,
+              "initialblockdownload": false,
+              "chainwork": "000000000000000000000000000000a02ed9f896cc1db4",
+              "size_on_disk": 556672030542,
+              "pruned": false,
+              "warnings": ""
+            }
         }
     },
     getnetworkinfo: () => {

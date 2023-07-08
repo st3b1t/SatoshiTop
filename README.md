@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal
 
-![system](docs/satop.gif)
+![system](docs/satoshitop.gif)
 
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
