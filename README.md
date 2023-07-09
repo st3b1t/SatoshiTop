@@ -24,7 +24,7 @@ This project has been organized in small readable and easy to edit files to enco
 * Linux / OSX / Windows (partial support)
 * Node.js >= v18
 
-### Installation
+## Installation
 
 By official [NPM package](https://npmjs.com/package/satop)
 
@@ -36,7 +36,7 @@ Don't forget to set restrictive read permissions for this file, for example: `ch
 
 *Snap and Docker* setup is work in progress...
 
-### Usage
+## Usage
 
 Start Satoshi Top with the `satop` command in system terminal(the same system whose resources you want to monitor).
 
