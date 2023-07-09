@@ -1,18 +1,23 @@
 # Satoshi Top
 
-Bitcoin full node monitoring dashboard for terminal
+Bitcoin full node monitoring dashboard for terminal.
 
-Some parts is WORK IN PROGRESS...
+( Some parts is WORK IN PROGRESS... )
 
 ![system](docs/satoshitop.gif)
+## Use case
+Having a modern dashboard that displays a lot of information similar to a modern bitcoin explorer, but keeping very poor requirements, it doesn't need a graphical environment (ncurses output) and the data exchange is minimal suitable for slow connections like `Tor` and monitors/lcds with low resolution and low fps.
 
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
+### Possible other features
+- http rest interface: this would allow viewing through a browser, while maintaining a tiny, text-only data exchange.
+- raw tcp interface: allows showing a screen with simple socket access (using tools like `cryptcat`)
+
 Many other features are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
 This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
-
 
 ### Requirements
 
