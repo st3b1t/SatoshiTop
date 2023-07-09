@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal
 
-...WORK IN PROGRESS...
+Some parts is WORK IN PROGRESS...
 
 ![system](docs/satoshitop.gif)
 
