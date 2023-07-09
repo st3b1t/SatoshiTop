@@ -12,9 +12,10 @@ You can define it an *htop for Bitcoin*... having a modern dashboard that displa
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
-### Possible other features
+**and other possibilities:**
+
 - http rest interface: this would allow viewing through a browser, while maintaining a tiny, text-only data exchange.
-- send text output to mini LCD via tty with low resolution and poor in colors.
+- send output via tty to mini LCD with low resolution and poor in colors.
 
 Many other features are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
 This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
