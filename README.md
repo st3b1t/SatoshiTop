@@ -2,6 +2,8 @@
 
 Bitcoin full node monitoring dashboard for terminal
 
+...WORK IN PROGRESS...
+
 ![system](docs/satoshitop.gif)
 
 ## Features
