@@ -1,0 +1,16 @@
+version: "3.7"
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  satoshitop:
+    #image: st3b1t/satoshitop
+    container_name: satoshitop
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      RPCCONNECT: 172.17.0.1
+      RPCPORT: 8332

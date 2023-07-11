@@ -1,4 +1,6 @@
 
+//TODO convert in json rpc server
+
 const fs = require('fs');
 
 const rnd = Math.random;
