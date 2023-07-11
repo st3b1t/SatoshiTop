@@ -1,25 +1,35 @@
 # Satoshi Top
 
-Bitcoin full node monitoring dashboard for terminal
+Bitcoin full node monitoring dashboard for terminal.
 
-Some parts is WORK IN PROGRESS...
+( Some parts is WORK IN PROGRESS... )
 
 ![system](docs/satoshitop.gif)
+## Use case
+You can define it an *htop for Bitcoin*... having a modern dashboard that displays a lot of information similar to a modern bitcoin explorer, but keeping very poor requirements, it doesn't need a graphical environment (ncurses output) and the data exchange is minimal suitable for slow connections like `Tor` and monitors/lcds with low resolution and low fps.
 
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
-System base monitor is inspired by [gtop](https://github.com/aksakalli/gtop) and many other features Bitcoin specific are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
-This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
+## Features
+- general system resources: cpu, mem, disk, network, processes, temperature
+- bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
+**and other possibilities:**
+
+- http rest interface: this would allow viewing through a browser, while maintaining a tiny, text-only data exchange.
+- send output via tty to mini LCD with low resolution and poor in colors.
+
+Many other features are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
+This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
 
 ### Requirements
 
 * Linux / OSX / Windows (partial support)
-* Node.js >= v18
+* Node.js >= v18 and NPM
 
-### Installation
+## Installation
 
 By official [NPM package](https://npmjs.com/package/satop)
 
@@ -31,7 +41,7 @@ Don't forget to set restrictive read permissions for this file, for example: `ch
 
 *Snap and Docker* setup is work in progress...
 
-### Usage
+## Usage
 
 Start Satoshi Top with the `satop` command in system terminal(the same system whose resources you want to monitor).
 
@@ -74,7 +84,8 @@ docker compose up
 $ npm run dev
 ```
 
-This script Set environment var `FAKEMODE` to allow bypass the real RPC connection.
+This script Set environment var `FAKEMODE` to allow simulate a RPC connection(doesn't need Bitcoin Core).
+
 Additional parameter `--intervalrpc=1000` allows to speed up data polling and `nodemon` to reload the code at each edits.
 
 
