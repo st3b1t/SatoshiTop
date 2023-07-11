@@ -59,7 +59,7 @@ You need to assign host `net` and `pid` to access the metrics in the host machin
 
 ```sh
 $ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop
-$ docker run --rm -it --name satoshitop --net="host" --pid="host" st3b1t/satoshitop
+$ docker run --rm -it -e RPCCONNECT="172.17.0.1" --name satoshitop --net="host" --pid="host" st3b1t/satoshitop
 ```
 
 or Docker Compose
@@ -67,12 +67,6 @@ or Docker Compose
 cd docker
 docker compose up
 ```
-
-
-## Run via Docker
-
-1. `docker build . -f ./docker/Dockerfile -t fbbe`
-2. `docker run -it -p 3000:3000 -e BITCOIND_ADDR=172.17.0.1:8332 `
 
 ### Development
 

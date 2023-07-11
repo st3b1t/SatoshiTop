@@ -1,12 +1,11 @@
 version: "3.7"
 
-networks:
-  default:
-    driver: bridge
+network_mode: host
+pid: host
 
 services:
   satoshitop:
-    #image: st3b1t/satoshitop
+    image: st3b1t/satoshitop
     container_name: satoshitop
     build:
       context: ../
