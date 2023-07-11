@@ -10,7 +10,7 @@ Some parts is WORK IN PROGRESS...
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
-Many other features are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
+System base monitor is inspired by [gtop](https://github.com/aksakalli/gtop) and many other features Bitcoin specific are work in progress, many more [Blessed widgets](https://github.com/chjj/blessed#widgets) and [contrib](https://github.com/yaronn/blessed-contrib#widgets) will be able to be integrated.
 This project has been organized in small readable and easy to edit files to encourage contributions from the active community of developers and bitcoiners, every Pull Request and suggestion is welcome.
 
 
@@ -51,6 +51,15 @@ Learn more about [command line parameters](docs/cli.md)...
 
 ```sh
 $ satop --help
+```
+
+### Run in Docker
+
+You need to assign host `net` and `pid` to access the metrics in the host machine.
+
+```sh
+$ docker build . -f ./docker/Dockerfile -t st3b1t/satop
+$ docker run --rm -it --name satop --net="host" --pid="host" st3b1t/satop
 ```
 
 ### Development
