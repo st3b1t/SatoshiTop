@@ -1,5 +1,9 @@
 .satoprc
 
+# dotenv environment variables file
+.env
+
+
 # Logs
 logs
 *.log
@@ -55,7 +59,3 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
-
