@@ -4,7 +4,7 @@
 You need to assign host `net` and `pid` to access the metrics in the host machine.
 
 ```sh
-$ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop
+$ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop:latest
 ```
 
 ```sh

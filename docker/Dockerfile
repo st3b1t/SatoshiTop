@@ -13,4 +13,4 @@ COPY package-lock.json .
 
 RUN npm install --production
 
-ENTRYPOINT ["./bin/satop"]
+ENTRYPOINT ["satop"]

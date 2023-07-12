@@ -7,16 +7,14 @@
     "satop": "./bin/satop"
   },
   "scripts": {
-    "test": "echo \"Test will be implemented.\" && exit 0",
     "start": "./bin/satop",
     "dev": "FAKEMODE=1 nodemon ./bin/satop --intervalrpc=1000",
     "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
     "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
-    "prepublishOnly": "marked-man --version $npm_package_version --manual 'satop help' --section 1 ./docs/cli.md > ./docs/cli.man"
+    "docker-build": "docker build -f docker/Dockerfile -t st3b1t/satoshitop:latest .",
+    "docker-up": "cd docker && docker-compose up",
+    "test": "echo \"Test will be implemented.\" && exit 0"
   },
-  "man": [
-    "./docs/cli.man"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/st3b1t/SatoshiTop.git"
@@ -47,7 +45,6 @@
     "node": "18.15.0"
   },
   "devDependencies": {
-    "marked-man": "^1.3.3",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8"
   }

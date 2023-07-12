@@ -11,5 +11,7 @@ services:
       context: ../
       dockerfile: docker/Dockerfile
     environment:
+      # bitcoin in host machine
       RPCCONNECT: 172.17.0.1
+      # bitcoin rpc default port
       RPCPORT: 8332
