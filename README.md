@@ -40,7 +40,8 @@ $ npm install satop -g
 $ satop --rpccookiefile=/home/user/.bitcoin/.cookie
 ```
 
-Or using username and password:
+Or using username and password, if `rpccookiefile` has valid value(file exists and readble) auth method
+bypass any values of `rpcuser/rpcpassword` and satop use the cookie file.
 ```sh
 $  satop --rpcuser=<username> --rpcpassword=<password>
 ```
