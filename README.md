@@ -49,7 +49,7 @@ $  satop --rpcuser=<username> --rpcpassword=<password>
 
 ## Source Code Installation
 
-Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
+Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and uncomment and set `rpccookiefile` Or bitcoin `rpcuser` `rpcpassword`.
 Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
 1. Quick way
