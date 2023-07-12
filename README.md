@@ -46,7 +46,7 @@ $  satop --rpcuser=<username> --rpcpassword=<password>
 ```
 (*All commands entered are stored in the bash history file. But we don't want the password to be stored where anyone can find it. For this, put a space in front of the command shown above.*)
 
-if `rpccookiefile` has valid value(file exists and readble) auth method bypass any values of `rpcuser/rpcpassword` and it use the cookie file.
+If `rpccookiefile` has valid value(file exists and readble) auth method bypass any values of `rpcuser/rpcpassword` and it use only the cookie file.
 
 ## Source Code Installation
 
@@ -58,23 +58,24 @@ $ cd ./SatoshiTop
 Now you have the development version, `master` branch.
 
 Choice a stable release from https://github.com/st3b1t/SatoshiTop/releases.
-Or select latest automatically:
+Or select latest automagically:
 ```sh
 $ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 ```
 
-Copy example config file [dot.satoprc.example](./dot.satoprc.example) in your home path:
+Copy the example config file [dot.satoprc.example](./dot.satoprc.example) in your home path:
 ```sh
 $ cp ./dot.satoprc.example ~/.satoprc
 $ chmod 0600 ~/.satoprc
 ```
-Now uncomment and set `rpccookiefile` Or Bitcoin `rpcuser` `rpcpassword`.
+Now uncomment and set `rpccookiefile` with path od Bitcoin cookie file or set `rpcuser` and `rpcpassword`.
 (*Don't forget to set restrictive read permissions for this file in case of storing rpcuser and rpcpassword*)
 
 Install dependencies and `satop` command in the global way and try it:
 ```sh
 $ npm install
 $ npm install -g .
+$ satop --version
 $ satop --help
 ```
 
@@ -96,7 +97,7 @@ $ satop --rpcconnect=192.168.0.3 --rpcport=18332
 
 To stop satop use `q`, or `ctrl+c` in most shell environments.
 
-Learn more about [command line parameters](docs/cli.md)...
+Learn more about command line [parameters](docs/cli.md)...
 
 
 ### Development
