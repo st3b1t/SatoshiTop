@@ -17,7 +17,7 @@ and the data exchange is minimal suitable for slow connections like `Tor` and mo
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
-**and other possibilities:**
+**Other possibilities:**
 
 - http rest interface: this would allow viewing through a browser, while maintaining a tiny, text-only data exchange.
 - send output via tty to mini LCD with low resolution and poor in colors.
