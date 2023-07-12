@@ -83,7 +83,7 @@ $ satop --help
 
 ## Usage
 
-Start Satoshi Top with the `satop` command in system terminal(the same system whose resources you want to monitor).
+Start SatoshiTop with the `satop` command in system terminal(the same system whose resources you want to monitor).
 
 ```sh
 $ satop
