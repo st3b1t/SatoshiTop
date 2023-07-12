@@ -40,23 +40,42 @@ $ npm install satop -g
 $ satop --rpccookiefile=/home/<user>/.bitcoin/.cookie
 ```
 
-Or using username and password, if `rpccookiefile` has valid value(file exists and readble) auth method
-bypass any values of `rpcuser/rpcpassword` and satop use the cookie file.
+Or use username and password
 ```sh
 $  satop --rpcuser=<username> --rpcpassword=<password>
 ```
-(*All commands entered are stored in the bash history file. But we don't want the password to be stored where anyone can find it. For this, put a space in front of the command shown below.*)
+(*All commands entered are stored in the bash history file. But we don't want the password to be stored where anyone can find it. For this, put a space in front of the command shown above.*)
+
+if `rpccookiefile` has valid value(file exists and readble) auth method bypass any values of `rpcuser/rpcpassword` and it use the cookie file.
 
 ## Source Code Installation
 
-Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and uncomment and set `rpccookiefile` Or bitcoin `rpcuser` `rpcpassword`.
-Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
-
-1. Quick way
-Install last stable version in global from [npm repository](https://npmjs.com/package/satop)
-
+Get source code:
 ```sh
-$ npm install satop -g
+$ git clone https://github.com/st3b1t/SatoshiTop.git
+$ cd ./SatoshiTop
+```
+Now you have the development version, `master` branch.
+
+Choice a stable release from https://github.com/st3b1t/SatoshiTop/releases.
+Or select latest automatically:
+```sh
+$ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
+```
+
+Copy example config file [dot.satoprc.example](./dot.satoprc.example) in your home path:
+```sh
+$ cp ./dot.satoprc.example ~/.satoprc
+$ chmod 0600 ~/.satoprc
+```
+Now uncomment and set `rpccookiefile` Or Bitcoin `rpcuser` `rpcpassword`.
+(*Don't forget to set restrictive read permissions for this file in case of storing rpcuser and rpcpassword*)
+
+Install dependencies and `satop` command in the global way and try it:
+```sh
+$ npm install
+$ npm install -g .
+$ satop --help
 ```
 
 [Docker](./docs/docker.md) and [Snap](./docs/snap.md) setup is work in progress...
@@ -79,9 +98,6 @@ To stop satop use `q`, or `ctrl+c` in most shell environments.
 
 Learn more about [command line parameters](docs/cli.md)...
 
-```sh
-$ satop --help
-```
 
 ### Development
 
