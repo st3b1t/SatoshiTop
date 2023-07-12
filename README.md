@@ -5,8 +5,11 @@ Bitcoin full node monitoring dashboard for terminal.
 ( Some parts is WORK IN PROGRESS... )
 
 ![system](docs/satoshitop.gif)
+
 ## Use case
-You can define it an *htop for Bitcoin*... having a modern dashboard that displays a lot of information similar to a modern bitcoin explorer, but keeping very poor requirements, it doesn't need a graphical environment (ncurses output) and the data exchange is minimal suitable for slow connections like `Tor` and monitors/lcds with low resolution and low fps.
+You can define it an *htop for Bitcoin*... having a modern dashboard that displays a lot of informations similar
+to a modern bitcoin explorer, but keeping very poor requirements, it doesn't need a graphical environment (output is ncurses)
+and the data exchange is minimal suitable for slow connections like `Tor` and monitors/lcds with low resolution and low fps.
 
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
@@ -26,18 +29,19 @@ This project has been organized in small readable and easy to edit files to enco
 
 ### Requirements
 
-* Linux / OSX / Windows (partial support)
+* Linux / OSX / Windows (maybe partial support)
 * Node.js >= v18 and NPM
 
 ## Installation
 
-By official [NPM package](https://npmjs.com/package/satop)
+Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
+Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
+
+Install last stable version in global from [npm repository](https://npmjs.com/package/satop)
 
 ```sh
 $ npm install satop -g
 ```
-Copy config file `dot.satoprc.example` in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
-Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
 *Snap and Docker* setup is work in progress...
 

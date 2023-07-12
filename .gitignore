@@ -2,7 +2,7 @@
 
 # dotenv environment variables file
 .env
-
+*.bak
 
 # Logs
 logs
