@@ -46,20 +46,6 @@ $  satop --rpcuser=<username> --rpcpassword=<password>
 ```
 (*All commands entered are stored in the bash history file. But we don't want the password to be stored where anyone can find it. For this, put a space in front of the command shown below.*)
 
-## Run in Docker
-You need to assign host `net` and `pid` to access the metrics in the host machine.
-
-```sh
-$ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop
-$ docker run --rm -it -e RPCCONNECT="172.17.0.1" --name satoshitop --net="host" --pid="host" st3b1t/satoshitop
-```
-
-Or using Docker Compose
-```sh
-cd docker
-docker compose up
-```
-
 ## Source Code Installation
 
 Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
@@ -72,8 +58,7 @@ Install last stable version in global from [npm repository](https://npmjs.com/pa
 $ npm install satop -g
 ```
 
-
-*Snap and Docker* setup is work in progress...
+[Docker](./docs/docker.md) and [Snap](./docs/snap.md) setup is work in progress...
 
 ## Usage
 
