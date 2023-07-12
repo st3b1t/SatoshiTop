@@ -37,7 +37,7 @@ Install last stable version in global from [official npm package](https://npmjs.
 
 ```sh
 $ npm install satop -g
-$ satop --rpccookiefile=/home/user/.bitcoin/.cookie
+$ satop --rpccookiefile=/home/<user>/.bitcoin/.cookie
 ```
 
 Or using username and password, if `rpccookiefile` has valid value(file exists and readble) auth method
