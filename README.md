@@ -32,16 +32,48 @@ This project has been organized in small readable and easy to edit files to enco
 * Linux / OSX / Windows (maybe partial support)
 * Node.js >= v18 and NPM
 
-## Installation
+## Quick Start
+
+Install last stable version in global from [official npm package](https://npmjs.com/package/satop)
+*(Installing packages from NPM repositories is always a quick but unsafe way if you want to keep your system free of malicious packages or dependencies)*
+
+```sh
+$ npm install satop -g
+$ satop --rpccookiefile=/home/user/.bitcoin/.cookie
+```
+
+Or using username and password:
+```sh
+$  satop --rpcuser=<username> --rpcpassword=<password>
+```
+(*All commands entered are stored in the bash history file. But we don't want the password to be stored where anyone can find it. For this, put a space in front of the command shown below.*)
+
+## Run in Docker
+You need to assign host `net` and `pid` to access the metrics in the host machine.
+
+```sh
+$ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop
+$ docker run --rm -it -e RPCCONNECT="172.17.0.1" --name satoshitop --net="host" --pid="host" st3b1t/satoshitop
+```
+
+Or using Docker Compose
+```sh
+cd docker
+docker compose up
+```
+
+## Source Code Installation
 
 Copy config file [dot.satoprc.example](./dot.satoprc.example) in path `$HOME/.satoprc` and add bitcoin `rpcuser` `rpcpassword`.
 Don't forget to set restrictive read permissions for this file, for example: `chmod 0600 ~/.satoprc`)
 
+1. Quick way
 Install last stable version in global from [npm repository](https://npmjs.com/package/satop)
 
 ```sh
 $ npm install satop -g
 ```
+
 
 *Snap and Docker* setup is work in progress...
 
@@ -65,21 +97,6 @@ Learn more about [command line parameters](docs/cli.md)...
 
 ```sh
 $ satop --help
-```
-
-### Run in Docker
-
-You need to assign host `net` and `pid` to access the metrics in the host machine.
-
-```sh
-$ docker build . -f ./docker/Dockerfile -t st3b1t/satoshitop
-$ docker run --rm -it -e RPCCONNECT="172.17.0.1" --name satoshitop --net="host" --pid="host" st3b1t/satoshitop
-```
-
-or Docker Compose
-```sh
-cd docker
-docker compose up
 ```
 
 ### Development
