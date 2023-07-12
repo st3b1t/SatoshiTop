@@ -2,6 +2,7 @@
 
 # dotenv environment variables file
 .env
+.cookie
 *.bak
 
 # Logs

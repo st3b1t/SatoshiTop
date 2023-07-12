@@ -1,6 +1,7 @@
 *.gif
 *.png
 .env
+.cookie
 .git*
 .github/
 .satoprc
