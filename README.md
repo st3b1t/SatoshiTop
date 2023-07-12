@@ -39,6 +39,7 @@ Install last stable version in global from [official npm package](https://npmjs.
 $ npm install satop -g
 $ satop --rpccookiefile=/home/<user>/.bitcoin/.cookie
 ```
+The path `/home/<user>/.bitcoin/.cookie` depends from Bitcoin [datadir config](https://github.com/bitcoin/bitcoin/blob/master/doc/init.md#configuration)
 
 Or use username and password
 ```sh
