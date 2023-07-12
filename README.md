@@ -6,14 +6,12 @@ Bitcoin full node monitoring dashboard for terminal.
 
 ![system](docs/satoshitop.gif)
 
+Sober and useful evolution of the senseless [SatoshiBanner](https://github.com/st3b1t/SatoshiBanner)
+
 ## Use case
 You can define it an *htop for Bitcoin*... having a modern dashboard that displays a lot of informations similar
 to a modern bitcoin explorer, but keeping very poor requirements, it doesn't need a graphical environment (output is ncurses)
 and the data exchange is minimal suitable for slow connections like `Tor` and monitors/lcds with low resolution and low fps.
-
-## Features
-- general system resources: cpu, mem, disk, network, processes, temperature
-- bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
 
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
