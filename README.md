@@ -114,9 +114,21 @@ This script Set environment var `FAKEMODE=true` to allow simulate a RPC connecti
 
 Additional parameter `--intervalrpc=1000` allows to speed up data polling and `nodemon` to reload the code at each edits.
 
+### Contributing
+
+Pull Requests are welcome, please make sure that your changes are tested
+
+In order of priority how you can help out:
+
+1. share this project in your social channels
+2. testing and report bugs in new issue
+3. try to resolve
+4. search `//TODO` in the source code
+5. add new features
+
 
 ## License
 
 Copyright (c) 2023 [st3b1t](https://github.com/st3b1t)
 
-Released under [the MIT license](LICENSE).
+Released under [MIT license](LICENSE).
