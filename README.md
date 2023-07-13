@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-( Some parts is WORK IN PROGRESS... )
+( Some parts is WORK IN PROGRESS... Open [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) for Proposals and reporting of problems)
 
 ![system](docs/satoshitop.gif)
 
@@ -114,6 +114,6 @@ Additional parameter `--intervalrpc=1000` allows to speed up data polling and `n
 
 ## License
 
-Copyright (c) 2023 [st3b1t](https://github.com/st3b1t) [@st3b1t](https://twitter.com/st3b1t)
+Copyright (c) 2023 [st3b1t](https://github.com/st3b1t)
 
 Released under [the MIT license](LICENSE).
