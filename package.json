@@ -1,6 +1,6 @@
 {
   "name": "satop",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Bitcoin full node monitoring dashboard for terminal",
   "main": "./lib/satop.js",
   "bin": {
