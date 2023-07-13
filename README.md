@@ -1,4 +1,4 @@
-# Satoshi Top
+# SatoshiTop
 
 Bitcoin full node monitoring dashboard for terminal.
 
