@@ -1,9 +1,9 @@
 #### Environment
 
-- OS:
-- Node version: (`$ node --version`)
-- Satoshi Top version: (`$ npm info satop version`)
+- SatoshiTop version: (`$ npm info satop version`)
+- NodeJs version: (`$ node --version`)
+- OS: (`grep VERSION /etc/os-release`)
 
-#### Description
+#### Description Proposals or Problems
 
 *A description of the issue*
