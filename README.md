@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-*(Some parts is WORK IN PROGRESS...)*
+*(Some parts is WORK IN PROGRESS... 🚧)*
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
