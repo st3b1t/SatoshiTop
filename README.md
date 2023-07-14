@@ -6,7 +6,7 @@ Bitcoin full node monitoring dashboard for terminal.
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
-Follow me for last updates: [@st3b1t](https://twitter.com/st3b1t) or full list of [Versions](https://github.com/st3b1t/SatoshiTop/releases)
+Follow me for last updates: [@st3b1t](https://twitter.com/st3b1t) or full list of [Releases](https://github.com/st3b1t/SatoshiTop/releases)
 
 ![system](docs/satoshitop.gif)
 
