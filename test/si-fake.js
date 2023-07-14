@@ -1,5 +1,6 @@
 
-//TODO convert in json rpc server
+//TODO make random data in each module follow the format:
+// https://systeminformation.io
 
 const rnd = Math.random;
 
