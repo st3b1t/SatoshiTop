@@ -6,7 +6,7 @@ Bitcoin full node monitoring dashboard for terminal.
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
-Follow me for updates: [@st3b1t](https://twitter.com/st3b1t)
+Follow me for last updates: [@st3b1t](https://twitter.com/st3b1t) or full list of [Releases](https://github.com/st3b1t/SatoshiTop/releases)
 
 ![system](docs/satoshitop.gif)
 
@@ -43,7 +43,7 @@ Install last stable version in global from [official npm package](https://npmjs.
 $ npm install satop -g
 $ satop --rpccookiefile=/home/<user>/.bitcoin/.cookie
 ```
-The path `/home/<user>/.bitcoin/.cookie` depends from Bitcoin [datadir config](https://github.com/bitcoin/bitcoin/blob/master/doc/init.md#configuration)
+The path `/home/<user>/.bitcoin/.cookie` depends from your Bitcoin [datadir config](https://github.com/bitcoin/bitcoin/blob/master/doc/init.md#configuration)
 
 Or use username and password
 ```sh
