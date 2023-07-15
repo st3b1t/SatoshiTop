@@ -1,18 +1,7 @@
-SatoshiTop
-=====
 
-> Bitcoin full node monitoring dashboard for terminal
+## CommandLine Options
 
-## SYNOPSIS
-
-`satop`
-
-
-## DESCRIPTION
-
-SatoshiTop is a system monitoring dashboard for Bitcoin full node in terminal much like htop, top, gtop etc...
-
-## COMMAND-LINE OPTIONS
+Some of the options can be set by the related environment variable `env: <NAMEVAR>`
 
   --conf
         Specify configuration file. Relative paths will be prefixed by $HOME location. (default: .satoprc)

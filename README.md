@@ -100,9 +100,15 @@ If Bitcoin daemon listening in different address(`127.0.0.1`) or a different por
 $ satop --rpcconnect=192.168.0.3 --rpcport=18332
 ```
 
+Or via Environment variable:
+
+```sh
+$ RPCCONNECT=192.168.0.3 RPCPORT=18332 satop
+```
+
 To stop satop use `q`, or `ctrl+c` in most shell environments.
 
-Learn more about command line [parameters](docs/cli.md)...
+Learn more about Environment and Command line [parameters](docs/cli.md)...
 
 
 ### Development
