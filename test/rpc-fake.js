@@ -104,7 +104,7 @@ const methods = {
 }
 
 module.exports = {
-    getrpcFake: (cmd, params = {}) => {
+    getFake: (cmd, params = {}) => {
         if (typeof methods[cmd] === 'function') {
             return methods[cmd](params);
         }
