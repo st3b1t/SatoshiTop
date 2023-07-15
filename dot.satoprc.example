@@ -5,6 +5,8 @@
 #rpcconnect=127.0.0.1
 #rpcport=8332
 #
+#rpcclienttimeout=5000
+#
 ## Preferred way use bitcoin auto generated cookie file, absolute path.
 ## https://github.com/Kixunil/security_writings/blob/master/cookie_files.md
 #rpccookiefile=/home/bitcoin/.bitcoin/.cookie

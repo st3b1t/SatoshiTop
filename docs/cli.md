@@ -22,6 +22,10 @@ SatoshiTop is a system monitoring dashboard for Bitcoin full node in terminal mu
         Send commands to node running on <ip> (default: 127.0.0.1)
         (env: RPCCONNECT)
 
+  --rpcclienttimeout
+        Timeout in seconds during HTTP requests, or 0 for no timeout (default: 5000)
+        (env: RPCCLIENTTIMEOUT)
+
   --rpccookiefile
         Location of the auth cookie. Absolute path
         (env: RPCCOOKIEFILE)
