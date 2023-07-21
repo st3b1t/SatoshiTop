@@ -34,6 +34,11 @@ This project has been organized in small readable and easy to edit files to enco
 * Linux / OSX / Windows (maybe partial support)
 * Node.js >= v18 and NPM
 
+If you see question marks(?) or other different characters, try to run it with these environment variables:
+```sh
+$ export LANG=en_US.utf8 TERM=xterm-256color
+```
+
 ## Quick Start
 
 Install last stable version in global from [official npm package](https://npmjs.com/package/satop)
