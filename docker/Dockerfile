@@ -1,3 +1,5 @@
+## How to use SatoshiTop via Docker:
+## https://github.com/st3b1t/SatoshiTop/blob/master/docs/docker.md
 FROM node:18.15.0-alpine
 
 RUN apk --no-cache add procps

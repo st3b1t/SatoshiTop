@@ -16,3 +16,6 @@ Or using Docker Compose
 cd docker
 docker compose up
 ```
+
+**Please Note:** for now, starting SatoshiTop requires rebooting the container in foreground and then re-running the docker command.
+in the future it may be possible to keep the container running in the background and then access the output of the `satop` command executable within the container
