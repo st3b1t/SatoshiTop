@@ -1,8 +1,13 @@
 #
 ##Copy this file in path $HOME/.satoprc
 #
-## Bitcoin RPC address and port
+## Bitcoin RPC address
 #rpcconnect=127.0.0.1
+#
+## run satop inside docker:
+#rpcconnect=172.17.0.1
+#
+##default bitcoin rpc port
 #rpcport=8332
 #
 #rpcclienttimeout=5000

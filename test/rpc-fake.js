@@ -18,6 +18,18 @@ const methods = {
         const pp = peers.slice(rnd(), 10+rnd()*2)
         return pp.sort(() => (rnd() > .5) ? 1 : -1);
     },
+    getmempoolinfo: () => {
+        return require('./getmempoolinfo.json');
+    },
+    lastblocks: height => {
+        const blocks = require('./lastblocks.json');
+        return {
+            lastblocks: blocks.map(b => {
+                b.height = height--;
+                return b
+            })
+        }
+    },
     getblockchaininfo: () => {
         vp += 0.037;
 
