@@ -36,8 +36,9 @@ This project has been organized in small readable and easy to edit files to enco
 
 If you see question marks(?) or other different characters, try to run it with these environment variables:
 ```sh
-$ export LANG=en_US.utf8 TERM=xterm-256color
+export LANG=en_US.utf8 TERM=xterm-256color
 ```
+you can add this in your ~/.profile file.
 
 ## Quick Start
 
