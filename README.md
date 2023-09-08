@@ -10,6 +10,8 @@ Follow me for last updates: [@st3b1t](https://twitter.com/st3b1t) or full list o
 
 ![system](docs/satoshitop.gif)
 
+![blocks](docs/satoshitop-blocks.gif)
+
 Sober and useful evolution of the senseless [SatoshiBanner](https://github.com/st3b1t/SatoshiBanner)
 
 ## Use case
