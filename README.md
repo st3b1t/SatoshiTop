@@ -129,6 +129,9 @@ Learn more about Environment and Command line [parameters](docs/cli.md)...
 ### Development
 
 ```sh
+$ git clone https://github.com/st3b1t/SatoshiTop
+$ cd SatoshiTop
+$ npm install
 $ npm run dev
 ```
 
