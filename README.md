@@ -125,10 +125,10 @@ To stop satop use `q`, or `ctrl+c` in most shell environments.
 
 Learn more about Environment and Command line [parameters](docs/cli.md)...
 
-#### Bitcoin RPC client
+#### RPC client
 
 From version [v2.5.0](https://github.com/st3b1t/SatoshiTop/releases/tag/v2.5.0) SatoshiTop include an additional command defined in `bin/satoprpc`.
-This allows you to send RPC methodi to your bitcoin node.
+This allows you to send RPC methodi to your full node.
 Learn more:
 ```bash
 $ satoprpc --help 
@@ -137,6 +137,7 @@ Show all rpc commands available in your Bitcoin RPC Node:
 ```bash
 $ satoprpc help 
 ```
+Now you can run only [Bitcoin rpc methods](https://developer.bitcoin.org/reference/rpc/). Coming soon are Electrum Server rpc methods and other commands for to control Lightning Network node... all in one command line! 
 
 ### Development
 
