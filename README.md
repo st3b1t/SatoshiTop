@@ -24,6 +24,7 @@ and the data exchange is minimal suitable for slow connections like `Tor` and mo
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
+- all in one [rpc client](https://github.com/st3b1t/SatoshiTop/tree/master#rpc-client) to control all services in your full node
 
 **Other possibilities:**
 
