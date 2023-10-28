@@ -2,7 +2,7 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-*(Some parts is WORK IN PROGRESS... 🚧)*
+*(Some parts is WORK IN PROGRESS... 🚧)* support the progress by [tip me a coffee ☕](https://getalby.com/p/st3b1t)
 
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
