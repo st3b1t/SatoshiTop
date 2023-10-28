@@ -149,7 +149,7 @@ $ npm install
 $ npm run dev
 ```
 
-This script Set environment var `FAKEMODE=true` to allow simulate a RPC connection(doesn't need Bitcoin Core).
+This script Set environment var `FAKEMODE=true` to allow simulate a RPC connection for debugging without Bitcoin Core.
 
 Additional parameter `--intervalrpc=1000` allows to speed up data polling and `nodemon` to reload the code at each edits.
 
