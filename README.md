@@ -83,6 +83,8 @@ Or select latest automagically:
 $ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 ```
 
+### Verify
+
 Copy the example config file [dot.satoprc.example](./dot.satoprc.example) in your home path:
 ```sh
 $ cp ./dot.satoprc.example ~/.satoprc
