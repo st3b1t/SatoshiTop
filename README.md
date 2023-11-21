@@ -167,11 +167,11 @@ In order of priority how you can help out:
 4. search [`//TODO`](https://github.com/search?q=repo%3Ast3b1t%2FSatoshiTop%20%2F%2FTODO&type=code) in the source code
 5. add new features
 
-### Donations
+### DONATE
 
 You can donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
 
-[Donate me](https://getalby.com/p/st3b1t)
+[Donate me via LN](https://getalby.com/p/st3b1t)
 
 
 ## License
