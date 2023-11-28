@@ -4,13 +4,13 @@ Bitcoin full node monitoring dashboard for terminal.
 
 **Some parts is WORK IN PROGRESS... 🚧 
 
+[![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
+
 ### DONATE
 
 Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
 
 [![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/88922adf-757d-42f8-b63c-ef0d1c374455)](https://getalby.com/p/st3b1t)
-
-[![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
