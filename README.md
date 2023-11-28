@@ -2,7 +2,15 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-**Some parts is WORK IN PROGRESS... 🚧 support the progress: [🧡 tip me a coffee ☕](https://getalby.com/p/st3b1t) via LN ⚡**
+**Some parts is WORK IN PROGRESS... 🚧 
+
+### DONATE
+
+Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
+
+[Donate me via LN](https://getalby.com/p/st3b1t)
+
+![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/88922adf-757d-42f8-b63c-ef0d1c374455)
 
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
@@ -166,13 +174,6 @@ In order of priority how you can help out:
 3. try to resolve [easy issues](https://github.com/st3b1t/SatoshiTop/labels/good%20first%20issue))
 4. search [`//TODO`](https://github.com/search?q=repo%3Ast3b1t%2FSatoshiTop%20%2F%2FTODO&type=code) in the source code
 5. add new features
-
-### DONATE
-
-You can donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
-
-[Donate me via LN](https://getalby.com/p/st3b1t)
-
 
 ## License
 
