@@ -8,9 +8,7 @@ Bitcoin full node monitoring dashboard for terminal.
 
 Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
 
-[Donate me via LN](https://getalby.com/p/st3b1t)
-
-![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/88922adf-757d-42f8-b63c-ef0d1c374455)
+[![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/88922adf-757d-42f8-b63c-ef0d1c374455)](https://getalby.com/p/st3b1t)
 
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
