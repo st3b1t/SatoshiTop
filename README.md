@@ -10,7 +10,7 @@ Bitcoin full node monitoring dashboard for terminal.
 
 Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
 
-[![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/88922adf-757d-42f8-b63c-ef0d1c374455)](https://getalby.com/p/st3b1t)
+[![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/4a0efa68-7dab-4463-9513-7af2360e90c7)](https://getalby.com/p/st3b1t)
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
