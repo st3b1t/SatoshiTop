@@ -51,6 +51,11 @@ export LANG=en_US.utf8 TERM=xterm-256color
 ```
 you can add this in your ~/.profile file.
 
+get terminal size, chars rows and columns:
+```bash
+$ stty size
+```
+
 ## Quick Start
 
 Install last stable version in global from [official npm package](https://npmjs.com/package/satop)
