@@ -55,6 +55,13 @@ get terminal size, chars rows and columns:
 ```bash
 $ stty size
 ```
+it should be at least 33x100, otherwise change using `setfont` command.
+
+In Embedded devices having little display you can use this terminal to show unicode fonts
+```bash
+$ apt install fbterm
+$ fbterm
+```
 
 ## Quick Start
 
