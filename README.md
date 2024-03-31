@@ -2,9 +2,15 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-*(Some parts is WORK IN PROGRESS... 🚧)*
+**Some parts is WORK IN PROGRESS... 🚧 
 
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
+
+### DONATE
+
+Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
+
+[![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/4a0efa68-7dab-4463-9513-7af2360e90c7)](https://getalby.com/p/st3b1t)
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
@@ -24,6 +30,7 @@ and the data exchange is minimal suitable for slow connections like `Tor` and mo
 ## Features
 - general system resources: cpu, mem, disk, network, processes, temperature
 - bitcoin core specific: status, blocks, uptime, tor, peers... (WORK IN PROGRESS)
+- all in one [rpc client](https://github.com/st3b1t/SatoshiTop/tree/master#rpc-client) to control all services in your full node
 
 **Other possibilities:**
 
@@ -43,6 +50,18 @@ If you see question marks(?) or other different characters, try to run it with t
 export LANG=en_US.utf8 TERM=xterm-256color
 ```
 you can add this in your ~/.profile file.
+
+get terminal size, chars rows and columns:
+```bash
+$ stty size
+```
+it should be at least 33x100, otherwise change using `setfont` command.
+
+In Embedded devices having little display you can use this terminal to show unicode fonts
+```bash
+$ apt install fbterm
+$ fbterm
+```
 
 ## Quick Start
 
@@ -81,6 +100,8 @@ Or select latest automagically:
 ```sh
 $ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 ```
+
+### Verify
 
 Copy the example config file [dot.satoprc.example](./dot.satoprc.example) in your home path:
 ```sh
@@ -125,6 +146,19 @@ To stop satop use `q`, or `ctrl+c` in most shell environments.
 
 Learn more about Environment and Command line [parameters](docs/cli.md)...
 
+#### RPC client
+
+From version [v2.5.0](https://github.com/st3b1t/SatoshiTop/releases/tag/v2.5.0) SatoshiTop include an additional command defined in `bin/satoprpc`.
+This allows you to send RPC methodi to your full node.
+Learn more:
+```bash
+$ satoprpc --help 
+```
+Show all rpc commands available in your Bitcoin RPC Node:
+```bash
+$ satoprpc help 
+```
+Now you can run only [Bitcoin rpc methods](https://developer.bitcoin.org/reference/rpc/). Coming soon are Electrum Server rpc methods and other commands for to control Lightning Network node... all in one command line! 
 
 ### Development
 
@@ -135,7 +169,7 @@ $ npm install
 $ npm run dev
 ```
 
-This script Set environment var `FAKEMODE=true` to allow simulate a RPC connection(doesn't need Bitcoin Core).
+This script Set environment var `FAKEMODE=true` to allow simulate a RPC connection for debugging without Bitcoin Core.
 
 Additional parameter `--intervalrpc=1000` allows to speed up data polling and `nodemon` to reload the code at each edits.
 
@@ -150,7 +184,6 @@ In order of priority how you can help out:
 3. try to resolve [easy issues](https://github.com/st3b1t/SatoshiTop/labels/good%20first%20issue))
 4. search [`//TODO`](https://github.com/search?q=repo%3Ast3b1t%2FSatoshiTop%20%2F%2FTODO&type=code) in the source code
 5. add new features
-
 
 ## License
 
