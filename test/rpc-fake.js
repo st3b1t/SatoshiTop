@@ -109,7 +109,7 @@ module.exports = {
             return methods[cmd](params);
         }
         else {
-            console.warn('fake method not found')
+            //console.warn('fake method not found')
         }
     }
 }
