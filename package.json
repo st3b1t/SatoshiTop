@@ -1,6 +1,6 @@
 {
   "name": "satop",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Bitcoin full node monitoring dashboard for terminal",
   "main": "./lib/satop.js",
   "bin": {
@@ -13,6 +13,7 @@
     "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
     "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
     "docker-build": "docker build -f docker/Dockerfile -t st3b1t/satoshitop:latest .",
+    "docker-save": "docker save -o ./satoshitop.tar st3b1t/satoshitop:latest",
     "docker-up": "cd docker && docker-compose up",
     "test": "echo \"Test will be implemented.\" && exit 0"
   },
