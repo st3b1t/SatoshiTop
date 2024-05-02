@@ -189,4 +189,6 @@ In order of priority how you can help out:
 
 Copyright (c) 2023 [st3b1t](https://github.com/st3b1t)
 
+PGP: CED5FD8B091F3BEBD2203A45AF2E5D05D21BA845
+
 Released under [MIT license](LICENSE).
