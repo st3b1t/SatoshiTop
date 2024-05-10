@@ -24,8 +24,8 @@ const methods = {
         if (vp < 1) { //no sync
             return {
               "chain": "main",
-              "blocks": 795163,
-              "headers": 795165,
+              "blocks": 840004,
+              "headers": 840001,
               "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
               "difficulty": 52350439455487.47,
               "time": 1687512682,
@@ -42,8 +42,8 @@ const methods = {
             vp = rnd()>0.9 ? 0 : 1;
             return {
               "chain": "main",
-              "blocks": 795163,
-              "headers": 795163,
+              "blocks": 840004,
+              "headers": 840004,
               "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
               "difficulty": 52350439455487.47,
               "time": 1687512682,
@@ -121,6 +121,10 @@ const methods = {
             "feerate": 0.00243871,
             "blocks": 2
         }
+    },
+    getblockstats: block => {
+        const blocks = require('./getblockstats.json');
+        return blocks[ block ] || {};
     }
 }
 
