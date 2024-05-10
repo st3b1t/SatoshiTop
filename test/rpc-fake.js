@@ -24,7 +24,7 @@ const methods = {
         if (vp < 1) { //no sync
             return {
               "chain": "main",
-              "blocks": 840004,
+              "blocks": 840003,
               "headers": 840001,
               "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
               "difficulty": 52350439455487.47,
@@ -42,8 +42,8 @@ const methods = {
             vp = rnd()>0.9 ? 0 : 1;
             return {
               "chain": "main",
-              "blocks": 840004,
-              "headers": 840004,
+              "blocks": 840003,
+              "headers": 840003,
               "bestblockhash": "00000000000000cf2a9b6b5d09ef182f5f6999a33ee0bb109d",
               "difficulty": 52350439455487.47,
               "time": 1687512682,
@@ -116,11 +116,14 @@ const methods = {
           "fullrbf": false
         }
     },
-    estimatesmartfee: (blocks = 1) => {
-        return {
-            "feerate": 0.00243871,
-            "blocks": 2
-        }
+    estimatesmartfee: (blocks = [1]) => {
+        const index = Number(blocks[0])
+            , fees = {
+                1: {"feerate": 0.000443831, "blocks": 2},
+                3: {"feerate": 0.000344821, "blocks": 3},
+                6: {"feerate": 0.000183801, "blocks": 6}
+            };
+        return fees[ index ];
     },
     getblockstats: block => {
         const blocks = require('./getblockstats.json');
