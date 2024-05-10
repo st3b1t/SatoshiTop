@@ -100,6 +100,27 @@ const methods = {
             ],
             "warnings": ""
         }
+    },
+    getmempoolinfo: () => {
+        return {
+          "loaded": true,
+          "size": 70853,
+          "bytes": 78808980,
+          "usage": 295667408,
+          "total_fee": 7.99827001,
+          "maxmempool": 300000000,
+          "mempoolminfee": 0.00007758,
+          "minrelaytxfee": 0.00001000,
+          "incrementalrelayfee": 0.00001000,
+          "unbroadcastcount": 0,
+          "fullrbf": false
+        }
+    },
+    estimatesmartfee: (blocks = 1) => {
+        return {
+            "feerate": 0.00243871,
+            "blocks": 2
+        }
     }
 }
 
