@@ -117,13 +117,22 @@ const methods = {
         }
     },
     estimatesmartfee: (blocks = [1]) => {
-        const index = Number(blocks[0])
-            , fees = {
-                1: {"feerate": 0.000443831, "blocks": 2},
-                3: {"feerate": 0.000344821, "blocks": 3},
-                6: {"feerate": 0.000183801, "blocks": 6}
-            };
-        return fees[ index ];
+        const fees = [
+                {"feerate": 0.000443831, "blocks": 2},
+                {"feerate": 0.000344821, "blocks": 3},
+                {"feerate": 0.000244821, "blocks": 6},
+                {"feerate": 0.000543831, "blocks": 2},
+                {"feerate": 0.000444821, "blocks": 3},
+                {"feerate": 0.000383801, "blocks": 6},
+                {"feerate": 0.000553831, "blocks": 2},
+                {"feerate": 0.000454821, "blocks": 3},
+                {"feerate": 0.000413801, "blocks": 6}
+            ];
+
+        const shift = (rnd() > .5) ? 3 : 0
+            , index = Number(blocks[0]) + shift;
+
+        return fees[ Math.abs(index - 1) ]
     },
     getblockstats: block => {
         const blocks = require('./getblockstats.json');
