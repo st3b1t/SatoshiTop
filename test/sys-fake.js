@@ -10,7 +10,7 @@ module.exports = {
     currentLoad: () => {
         //TODO make random data
     },
-    mem: () => {
+    ram: () => {
         //TODO make random data
     },
     fsSize,
