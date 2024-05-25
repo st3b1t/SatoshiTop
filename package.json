@@ -9,6 +9,8 @@
   "scripts": {
     "start": "./bin/satop",
     "dev": "FAKEMODE=1 FAKERPC=1 nodemon ./bin/satop --verbose=true --intervalsys=500 --intervalrpc=1000",
+    "regtest": "FAKEMODE=1 nodemon ./bin/satop --verbose=true --intervalsys=500 --intervalrpc=1000",
+    "help": "./bin/satop --help",
     "config": "[ ! -e ~/.satoprc ] && cp ./dot.satoprc.example ~/.satoprc && chmod 0600 ~/.satoprc",
     "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
     "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
