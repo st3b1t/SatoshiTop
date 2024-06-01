@@ -2,8 +2,6 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
-**Some parts is WORK IN PROGRESS... 🚧 
-
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
 ### DONATE
