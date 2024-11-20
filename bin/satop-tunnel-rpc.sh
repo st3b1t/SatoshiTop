@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "This script create a tunnel from bitcoin node to local port for testing only"
+echo
 echo "Insert the hostname of Bitcoin node (press Enter for default 'localhost'):"
 read host
 echo "Insert the SSH username (press Enter for default 'admin'):"
