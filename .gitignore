@@ -5,6 +5,7 @@ satoshitop.tar
 .env
 .cookie
 *.bak
+*.sh
 
 # Logs
 logs
