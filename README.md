@@ -4,12 +4,6 @@ Bitcoin full node monitoring dashboard for terminal.
 
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
-### DONATE
-
-Donate via LightningNetwork ⚡ to incentivize future development and bug fixes.
-
-[![image](https://github.com/st3b1t/SatoshiTop/assets/113633676/4a0efa68-7dab-4463-9513-7af2360e90c7)](https://getalby.com/p/st3b1t)
-
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
 
 Follow me for last updates: [@st3b1t](https://twitter.com/st3b1t) or full list of [Releases](https://github.com/st3b1t/SatoshiTop/releases)
@@ -184,6 +178,15 @@ In order of priority how you can help out:
 3. try to resolve [easy issues](https://github.com/st3b1t/SatoshiTop/labels/good%20first%20issue))
 4. search [`//TODO`](https://github.com/search?q=repo%3Ast3b1t%2FSatoshiTop%20%2F%2FTODO&type=code) in the source code
 5. add new features
+
+### Donate
+
+Donate via Lightning Network Bolt12 ⚡ to incentivize future development and bug fixes.
+
+![dontate](https://github.com/st3b1t/st3b1t/raw/main/donate_bolt12.png)
+
+lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s98hg39x6ct93flx6jjkpcygfnqzmap67azxk5m792zhs0mg50z8vqgpqc4ecv0ff9klzlrru7uz95jylq9nfhzc5fpk0ezgu6490tr6rrwcqx06a2clgplqdqzfgd3x4h960zypk9md35uxh4suz3frxcz9dckyfm0gs5hl5lgxt8mgawyt63nsu4lzz0pvs95j825qfsvyxcuy9ntytqa7ljz70pcqletnnuklslxgx7zrj8ylrqqertseym9scshtsgcqe0tlyfhwynug9qve279l8j6txr72qr7qrnjrkm3lh7v23vpwlk298jgf34jlrl46s
+
 
 ## License
 
