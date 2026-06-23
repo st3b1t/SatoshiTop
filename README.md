@@ -2,6 +2,9 @@
 
 Bitcoin full node monitoring dashboard for terminal.
 
+The project may undergo a complete overhaul, which is currently under consideration.
+You can follow the project and contribute ideas using this label: [Refactor](https://github.com/st3b1t/SatoshiTop/issues?q=state%3Aopen%20label%3ARefactor)
+
 [![NPM](https://badge.fury.io/js/satop.svg)](http://badge.fury.io/js/satop)
 
 Proposals and reporting problems: [New issue](https://github.com/st3b1t/SatoshiTop/issues/new) or contribute by voting with a 👍 in [proposals issues](https://github.com/st3b1t/SatoshiTop/labels/Proposal)
