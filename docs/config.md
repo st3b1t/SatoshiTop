@@ -97,10 +97,9 @@ CONF=/etc/satoprc satop                 # absolute path
 satop --confgen
 ```
 
-writes a commented example to the configuration file path (`$HOME/.satoprc`, or
-the path given by `--conf`/`CONF`) with permissions `0600`, since it may hold a
-password. If the file already exists, `satop` asks before overwriting it; only
-the answer `y` overwrites.
+writes the commented example [src/config/dot.satoprc.example](../src/config/dot.satoprc.example) to the
+configuration file path (`$HOME/.satoprc`, or the path given by `--conf`/`CONF`) with permissions `0600`, since it may hold a
+password. If the file already exists, `satop` asks before overwriting it; only the answer `y` overwrites.
 
 ## Examples
 

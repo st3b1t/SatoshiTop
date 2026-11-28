@@ -16,9 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          # malevich is a path dependency in vendor/.
-          submodules: recursive
       - name: Install Rust 1.88 (minimum supported version)
         run: |
           rustup toolchain install 1.88 --profile minimal --component rustfmt,clippy

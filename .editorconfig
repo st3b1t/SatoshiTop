@@ -7,4 +7,12 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 end_of_line = lf
-max_line_length = null
+max_line_length = off
+
+# GitHub workflows, test fixtures and docs are indented with 2 spaces.
+[*.{yml,yaml,json,md}]
+indent_size = 2
+
+# Copied verbatim from the original, which has no final newline.
+[src/config/dot.satoprc.example]
+insert_final_newline = false

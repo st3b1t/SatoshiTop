@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Install Rust with the musl target
         run: |
           rustup toolchain install 1.88 --profile minimal --target x86_64-unknown-linux-musl

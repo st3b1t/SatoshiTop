@@ -9,22 +9,21 @@ feature and test it, with or without a Bitcoin node.
 |---|---|---|
 | Rust | 1.88 or later, edition 2024 | building ([rustup](https://rustup.rs)) |
 | `rustfmt`, `clippy` | from the same toolchain | formatting and lints (`rustup component add rustfmt clippy`) |
-| git | any | the submodules in `vendor/` |
 | tmux | any | optional: trying the dashboard at fixed sizes |
 | Node.js | 18 or later | optional: running the original for comparison |
 | Bitcoin Core | any recent release | optional: testing against a real node (regtest is enough) |
 
-No C libraries are needed. Clone with `--recurse-submodules` (in an existing
-clone: `git submodule update --init`), then check that everything is green:
+No C libraries are needed. Cargo downloads every dependency, including the
+charting library [malevich](https://crates.io/crates/malevich), then check that
+everything is green:
 
 ```sh
 cargo build && cargo test && cargo clippy --all-targets
 ```
 
-`vendor/SatoshiTop` (the original JavaScript, branch
-[v2.5.x-nodejs](https://github.com/st3b1t/SatoshiTop/tree/v2.5.x-nodejs), the reference for the behaviour) and `vendor/malevich` (the charting library, a `path` dependency)
-are read-only: never change files there. If malevich lacks something, work
-around it in our code.
+The reference for the behaviour is the original Node.js version, in the
+[v2.5.x-nodejs](https://github.com/st3b1t/SatoshiTop/tree/v2.5.x-nodejs) branch.
+If malevich lacks something, work around it in our code.
 
 ## Code layout
 
@@ -223,11 +222,13 @@ Then run `cargo run -- --rpcuser=<username> --rpcpassword=<password>`.
 
 ## Comparing with the original
 
-The Node.js version lives in the [v2.5.x-nodejs](https://github.com/st3b1t/SatoshiTop/tree/v2.5.x-nodejs) branch, checked out in
-`vendor/SatoshiTop`:
+The Node.js version lives in the
+[v2.5.x-nodejs](https://github.com/st3b1t/SatoshiTop/tree/v2.5.x-nodejs) branch;
+clone it outside this repository:
 
 ```sh
-cd vendor/SatoshiTop
+git clone -b v2.5.x-nodejs https://github.com/st3b1t/SatoshiTop satoshitop-nodejs
+cd satoshitop-nodejs
 npm install
 FAKERPC=1 npm run dev
 ```

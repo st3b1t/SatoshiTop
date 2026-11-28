@@ -38,16 +38,12 @@ jobs:
     env:
       ARTIFACT: SatoshiTop-${{ matrix.platform }}-x86-64
     steps:
-      # git must be there before the checkout, or the submodules in vendor/
-      # (malevich is a path dependency) are not fetched.
       - name: Install build tools
         run: |
           apt-get update
           DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-            build-essential ca-certificates curl git
+            build-essential ca-certificates curl
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
       # Distribution packages of Rust are older than the minimum version.
       - name: Install Rust ${{ env.RUST_VERSION }}
         run: |
@@ -83,8 +79,6 @@ jobs:
       CROSS_VERSION: v0.2.5
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Install Rust ${{ env.RUST_VERSION }}
         run: |
           rustup toolchain install "$RUST_VERSION" --profile minimal --target "$TARGET"

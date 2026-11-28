@@ -106,7 +106,8 @@ pub fn virtual_bytes(btc_per_kvb: f64) -> i64 {
 mod tests {
     use super::*;
 
-    // Expected values generated with `node -e` from vendor/SatoshiTop/lib/utils.
+    // Expected values generated with `node -e` from lib/utils/human.js of the
+    // original (branch v2.5.x-nodejs).
 
     #[test]
     fn human_subver_strips_slashes() {
