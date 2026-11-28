@@ -8,8 +8,8 @@ Each archive holds `satop`, `LICENSE` and `README.md`. Extract it and install
 the binary:
 
 ```sh
-tar xzf SatoshiTop-debian-12-x86-64.tar.gz
-sudo install -m 0755 SatoshiTop-debian-12-x86-64/satop /usr/local/bin/satop
+tar xzf satop-debian-12-x86-64.tar.gz
+sudo install -m 0755 satop-debian-12-x86-64/satop /usr/local/bin/satop
 satop --version
 ```
 

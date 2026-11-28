@@ -1,5 +1,3 @@
-# Disabled: GitHub only runs workflows in .github/workflows/.
-# Rename the directory to enable it.
 name: Rust CI
 
 on:

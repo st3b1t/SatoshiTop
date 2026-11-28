@@ -68,15 +68,19 @@ mark or preset in malevich that already does it.
 - A feature is done when `cargo build` and `cargo clippy --all-targets` give no
   warnings, `cargo test` passes and `FAKESYS=1 FAKERPC=1 cargo run` shows it.
   Run `cargo fmt` before committing.
-- `.github/_workflows/` holds the GitHub Actions workflows, disabled until the
-  directory is renamed to `.github/workflows/`:
-  - `ci.yml` runs the same checks with Rust 1.88 (`cargo fmt --check`, clippy
-    with `-D warnings`, tests);
-  - `build.yml` (manual or on a `v*` tag) builds `SatoshiTop-debian-13-x86-64`,
-    `SatoshiTop-debian-12-x86-64`, `SatoshiTop-ubuntu-24.04-x86-64`,
-    `SatoshiTop-ubuntu-22.04-x86-64` inside a container of each distribution,
-    and `SatoshiTop-raspios-64-arm64` with `cross`;
-  - `release.yml` attaches a static musl binary to every GitHub release.
+- `.github/workflows/` holds the GitHub Actions workflows:
+  - `ci.yml`, on every push and pull request to `master`, runs the same checks
+    with Rust 1.88 (`cargo fmt --check`, clippy with `-D warnings`, tests);
+  - `build.yml` and `release.yml` run on every pushed `v*` tag (`v3.0.1`,
+    `v3.1.0`, `v3.1.0-alpha.1`; a tag with a `-` suffix gives a GitHub
+    pre-release). They create the GitHub release of the tag if it does not
+    exist and attach the archives, each with its `.sha256`: `build.yml` the five
+    `satop-debian-13-x86-64`, `satop-debian-12-x86-64`,
+    `satop-ubuntu-24.04-x86-64`, `satop-ubuntu-22.04-x86-64` (built inside a
+    container of each distribution) and `satop-raspios-64-arm64` (built with
+    `cross`); `release.yml` the static `satop-<tag>-x86_64-linux-musl`.
+
+  To publish a release: `git tag v3.1.0 && git push origin v3.1.0`.
 
 ### A new value from the node
 

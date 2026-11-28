@@ -1,10 +1,10 @@
-# Disabled: GitHub only runs workflows in .github/workflows/.
-# Rename the directory to enable it.
 name: Release binary
 
 on:
-  release:
-    types: [created]
+  # Every version tag: v3.0.0, v3.0.1, v3.1.0-alpha.1, ...
+  push:
+    tags:
+      - 'v*'
 
 permissions:
   # Upload the archive to the release.
@@ -32,4 +32,11 @@ jobs:
       - name: Upload to the release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "$GITHUB_REF_NAME" satop-*.tar.gz satop-*.tar.gz.sha256
+        run: |
+          # A tag with a suffix (v3.1.0-alpha.1) is a pre-release, never "Latest".
+          pre=; case "$GITHUB_REF_NAME" in *-*) pre=--prerelease ;; esac
+          # The other build workflow may have created it already.
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 \
+            || gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --generate-notes $pre \
+            || gh release view "$GITHUB_REF_NAME" >/dev/null
+          gh release upload "$GITHUB_REF_NAME" --clobber satop-*.tar.gz satop-*.tar.gz.sha256

@@ -1,6 +1,3 @@
-# Disabled: GitHub only runs workflows in .github/workflows/.
-# Rename the directory to enable it.
-#
 # Builds satop for each supported distribution from the same sources and the
 # same Cargo.toml:
 # - x86-64: inside a container of the distribution itself, so the binary is
@@ -10,7 +7,7 @@
 name: Build binaries
 
 on:
-  workflow_dispatch:
+  # Every version tag: v3.0.0, v3.0.1, v3.1.0-alpha.1, ...
   push:
     tags:
       - 'v*'
@@ -20,7 +17,7 @@ env:
 
 jobs:
   x86-64:
-    name: SatoshiTop-${{ matrix.platform }}-x86-64
+    name: satop-${{ matrix.platform }}-x86-64
     runs-on: ubuntu-latest
     container: ${{ matrix.image }}
     strategy:
@@ -36,7 +33,7 @@ jobs:
           - platform: ubuntu-22.04
             image: ubuntu:22.04
     env:
-      ARTIFACT: SatoshiTop-${{ matrix.platform }}-x86-64
+      ARTIFACT: satop-${{ matrix.platform }}-x86-64
     steps:
       - name: Install build tools
         run: |
@@ -71,10 +68,10 @@ jobs:
           if-no-files-found: error
 
   raspios-arm64:
-    name: SatoshiTop-raspios-64-arm64
+    name: satop-raspios-64-arm64
     runs-on: ubuntu-latest
     env:
-      ARTIFACT: SatoshiTop-raspios-64-arm64
+      ARTIFACT: satop-raspios-64-arm64
       TARGET: aarch64-unknown-linux-gnu
       CROSS_VERSION: v0.2.5
     steps:
@@ -107,3 +104,32 @@ jobs:
           name: ${{ env.ARTIFACT }}
           path: ${{ env.ARTIFACT }}.tar.gz
           if-no-files-found: error
+
+  # Attaches the five archives, each with its .sha256, to the release of the tag.
+  release:
+    needs: [x86-64, raspios-arm64]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: satop-*
+          path: dist
+          merge-multiple: true
+      - name: Checksums
+        working-directory: dist
+        run: for f in *.tar.gz; do sha256sum "$f" > "$f.sha256"; done
+      - name: Upload to the release
+        working-directory: dist
+        run: |
+          # A tag with a suffix (v3.1.0-alpha.1) is a pre-release, never "Latest".
+          pre=; case "$GITHUB_REF_NAME" in *-*) pre=--prerelease ;; esac
+          # The other build workflow may have created it already.
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 \
+            || gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --generate-notes $pre \
+            || gh release view "$GITHUB_REF_NAME" >/dev/null
+          gh release upload "$GITHUB_REF_NAME" --clobber satop-*.tar.gz satop-*.tar.gz.sha256
