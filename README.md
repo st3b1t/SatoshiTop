@@ -9,7 +9,7 @@ Bitcoin full node monitoring dashboard for terminal.
 >
 > Nothing changes for current users yet: version 2.x remains the stable release and
 > `npm install -g satop` keeps installing it. The JavaScript code will stay available
-> in a separate, upcoming `v2.x-nodejs` branch, Javascript development will be abandoned in favor of the master branch in Rust.
+> in a separate, upcoming [v2.5.x-nodejs](https://github.com/st3b1t/SatoshiTop/tree/v2.5.x-nodejs) branch, Javascript development will be abandoned in favor of the master branch in Rust.
 >
 > Follow progress and share ideas with the [Refactor](https://github.com/st3b1t/SatoshiTop/issues?q=state%3Aopen%20label%3ARefactor) label.
 
