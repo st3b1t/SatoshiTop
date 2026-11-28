@@ -1,0 +1,115 @@
+# Disabled: GitHub only runs workflows in .github/workflows/.
+# Rename the directory to enable it.
+#
+# Builds satop for each supported distribution from the same sources and the
+# same Cargo.toml:
+# - x86-64: inside a container of the distribution itself, so the binary is
+#   linked against its glibc and runs there and on newer releases;
+# - Raspberry Pi OS 64 bit: cross-compiled with cross, whose container has an
+#   older glibc than any Raspberry Pi OS release that supports arm64.
+name: Build binaries
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  RUST_VERSION: '1.88'
+
+jobs:
+  x86-64:
+    name: SatoshiTop-${{ matrix.platform }}-x86-64
+    runs-on: ubuntu-latest
+    container: ${{ matrix.image }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: debian-13
+            image: debian:13
+          - platform: debian-12
+            image: debian:12
+          - platform: ubuntu-24.04
+            image: ubuntu:24.04
+          - platform: ubuntu-22.04
+            image: ubuntu:22.04
+    env:
+      ARTIFACT: SatoshiTop-${{ matrix.platform }}-x86-64
+    steps:
+      # git must be there before the checkout, or the submodules in vendor/
+      # (malevich is a path dependency) are not fetched.
+      - name: Install build tools
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            build-essential ca-certificates curl git
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      # Distribution packages of Rust are older than the minimum version.
+      - name: Install Rust ${{ env.RUST_VERSION }}
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+            | sh -s -- -y --profile minimal --default-toolchain "$RUST_VERSION"
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Build
+        run: cargo build --locked --release
+      - name: Check the binary
+        run: |
+          target/release/satop -V
+          echo "glibc of the build system: $(ldd --version | head -1)"
+          echo "newest glibc symbol required:"
+          objdump -T target/release/satop | grep -o 'GLIBC_[0-9.]*' | sort -uV | tail -1
+      - name: Package
+        run: |
+          mkdir "$ARTIFACT"
+          cp target/release/satop LICENSE README.md "$ARTIFACT/"
+          # A tar archive keeps the executable bit, which artifacts drop.
+          tar czf "$ARTIFACT.tar.gz" "$ARTIFACT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT }}
+          path: ${{ env.ARTIFACT }}.tar.gz
+          if-no-files-found: error
+
+  raspios-arm64:
+    name: SatoshiTop-raspios-64-arm64
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACT: SatoshiTop-raspios-64-arm64
+      TARGET: aarch64-unknown-linux-gnu
+      CROSS_VERSION: v0.2.5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install Rust ${{ env.RUST_VERSION }}
+        run: |
+          rustup toolchain install "$RUST_VERSION" --profile minimal --target "$TARGET"
+          rustup default "$RUST_VERSION"
+      # Prebuilt cross; it runs the build in its Docker image for the target.
+      - name: Install cross
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSfL \
+            "https://github.com/cross-rs/cross/releases/download/$CROSS_VERSION/cross-x86_64-unknown-linux-musl.tar.gz" \
+            | tar xz -C "$HOME/.cargo/bin" cross
+          cross --version
+      - name: Build
+        run: cross build --locked --release --target "$TARGET"
+      - name: Check the binary
+        run: |
+          file "target/$TARGET/release/satop"
+          echo "newest glibc symbol required:"
+          objdump -T "target/$TARGET/release/satop" | grep -o 'GLIBC_[0-9.]*' | sort -uV | tail -1
+      - name: Package
+        run: |
+          mkdir "$ARTIFACT"
+          cp "target/$TARGET/release/satop" LICENSE README.md "$ARTIFACT/"
+          tar czf "$ARTIFACT.tar.gz" "$ARTIFACT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT }}
+          path: ${{ env.ARTIFACT }}.tar.gz
+          if-no-files-found: error

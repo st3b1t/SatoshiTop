@@ -1,0 +1,42 @@
+{
+  "version": 220000,
+  "subversion": "/Satoshi:22.0.0/",
+  "protocolversion": 70016,
+  "localservices": "0000000000000409",
+  "localservicesnames": [
+    "NETWORK",
+    "NETWORK_LIMITED"
+  ],
+  "localrelay": true,
+  "timeoffset": 0,
+  "networkactive": true,
+  "connections": 41,
+  "connections_in": 31,
+  "connections_out": 10,
+  "networks": [
+    {
+      "name": "ipv4",
+      "limited": false,
+      "reachable": true,
+      "proxy": "",
+      "proxy_randomize_credentials": false
+    },
+    {
+      "name": "onion",
+      "limited": false,
+      "reachable": true,
+      "proxy": "127.0.0.1:9050",
+      "proxy_randomize_credentials": true
+    }
+  ],
+  "relayfee": 1e-05,
+  "incrementalfee": 1e-05,
+  "localaddresses": [
+    {
+      "address": "satoshitopm72cepqoa2l54adxtg3qwdd7ci6oddzcco5yjqd7mrdwqk.onion",
+      "port": 8333,
+      "score": 4
+    }
+  ],
+  "warnings": ""
+}

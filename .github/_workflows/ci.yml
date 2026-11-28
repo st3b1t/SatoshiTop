@@ -1,0 +1,31 @@
+# Disabled: GitHub only runs workflows in .github/workflows/.
+# Rename the directory to enable it.
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # malevich is a path dependency in vendor/.
+          submodules: recursive
+      - name: Install Rust 1.88 (minimum supported version)
+        run: |
+          rustup toolchain install 1.88 --profile minimal --component rustfmt,clippy
+          rustup default 1.88
+      - name: Format check
+        run: cargo fmt --check
+      - name: Lint check
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: Test
+        run: cargo test --locked
